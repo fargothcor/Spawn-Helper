@@ -1,0 +1,10 @@
+name: Spawnhelper
+version: 1.0.0
+main: io.github.fargothcor.spawnhelper.spawnhelper.Spawnhelper
+authors: [fargothcor, ivanshipitsin]
+description: Very simple plugin
+website: While not avable
+commands:
+  spawn:
+    description: For teleporting to spawn
+    usage: /spawn
