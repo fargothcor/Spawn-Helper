@@ -20,10 +20,7 @@ public class commands implements CommandExecutor {
             return true;
         }
         //Location loc = ((Player) sender).getLocation();
-        Location loc = new Location();
-        loc.setX(225);
-        loc.setY(65);
-        loc.setZ(225);
+        Location loc = new Location(((Player) sender).getWorld(),225,65,225);
         ((Player) sender).teleport(loc);
         ((Player) sender).setHealth(20.0);
 
