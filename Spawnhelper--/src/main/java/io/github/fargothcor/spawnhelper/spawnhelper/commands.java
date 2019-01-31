@@ -1,10 +1,14 @@
 package io.github.fargothcor.spawnhelper.spawnhelper;
 
 import org.bukkit.Location;
+import org.bukkit.World;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+
+import static org.bukkit.Bukkit.getLogger;
+import static org.bukkit.Bukkit.getWorld;
 
 
 public class commands implements CommandExecutor {
@@ -22,8 +26,7 @@ public class commands implements CommandExecutor {
         }
         //хуй
         //more хуй
-        Location loc = new Location(((Player) sender).getWorld(),225,65,225);
-        getLogger().info(loc);
+        Location loc = new Location(getWorld("world"),225,65,225);
         ((Player) sender).teleport(loc);
         ((Player) sender).setHealth(20.0);
 
