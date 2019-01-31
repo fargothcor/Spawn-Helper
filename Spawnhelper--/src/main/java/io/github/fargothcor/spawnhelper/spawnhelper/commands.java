@@ -19,7 +19,8 @@ public class commands implements CommandExecutor {
             sender.sendMessage("You must be a player!");
             return true;
         }
-        Location loc = ((Player) sender).getLocation();
+        //Location loc = ((Player) sender).getLocation();
+        Location loc = new Location();
         loc.setX(225);
         loc.setY(65);
         loc.setZ(225);
