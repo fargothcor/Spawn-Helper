@@ -9,7 +9,8 @@ import org.bukkit.entity.Player;
 
 public class commands implements CommandExecutor {
     private Spawnhelper plugin;
-    public commands(Spawnhelper plugin){
+    public commands(Spawnhelper plugin)
+    {
         this.plugin = plugin;
     }
     
@@ -19,7 +20,8 @@ public class commands implements CommandExecutor {
             sender.sendMessage("You must be a player!");
             return true;
         }
-        //Location loc = ((Player) sender).getLocation();
+        //хуй
+        //more хуй
         Location loc = new Location(((Player) sender).getWorld(),225,65,225);
         getLogger().info(loc);
         ((Player) sender).teleport(loc);
