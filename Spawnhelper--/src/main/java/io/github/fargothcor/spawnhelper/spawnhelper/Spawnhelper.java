@@ -9,11 +9,7 @@ public final class Spawnhelper extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        File config = new File(getDataFolder() + File.separator +  "config.yml");
-        if (!config.exists()){
-            getConfig().options().copyDefaults(true);
-            saveDefaultConfig();
-        }
+        this.reloadConfig();
         Bukkit.getPluginManager().registerEvents(new Handler(), this);
 
         getCommand("spawn").setExecutor(new commands(this));
