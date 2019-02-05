@@ -11,6 +11,7 @@ public final class Spawnhelper extends JavaPlugin {
     public void onEnable() {
         this.reloadConfig();
         Bukkit.getPluginManager().registerEvents(new Handler(), this);
+
         getCommand("spawn").setExecutor(new commands(this));
         getLogger().info("PLUGIN WAS STARTED SUCCESSFULLY!!!");
     }
@@ -20,3 +21,4 @@ public final class Spawnhelper extends JavaPlugin {
         getLogger().info("Ty Ahyel????");
     }
 }
+    
