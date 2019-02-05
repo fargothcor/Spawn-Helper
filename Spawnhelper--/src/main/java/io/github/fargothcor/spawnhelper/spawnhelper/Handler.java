@@ -9,7 +9,7 @@ import org.bukkit.entity.Player;
 public class Handler implements Listener {
     @EventHandler
     public void join(PlayerJoinEvent e){
-        Player p=e.getPlayer();
+        Player p = e.getPlayer();
         p.chat("Hello bitch");
     }
     
