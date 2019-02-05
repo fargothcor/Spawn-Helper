@@ -19,16 +19,20 @@ public class commands implements CommandExecutor {
     {
         this.plugin = plugin;
     }
-    public Double x = plugin.getConfig().getDouble("spawn.coords.x"),
-                  y = plugin.getConfig().getDouble("spawn.coords.y"),
-                  z = plugin.getConfig().getDouble("spawn.coords.z");
+    private Double x,y,z;
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args){
         if (!(sender instanceof Player)) {
             sender.sendMessage("You must be a player!");
             return true;
         }
+        if(plugin.getConfig()==null){
+            return false;
+        }
 
+        x=plugin.getConfig().getDouble("spawn.coords.x");
+        y=plugin.getConfig().getDouble("spawn.coords.y");
+        z=plugin.getConfig().getDouble("spawn.coords.z");
 
         Location loc = new Location(getWorld("world"), x, y, z);
         ((Player) sender).setGameMode(GameMode.ADVENTURE);
